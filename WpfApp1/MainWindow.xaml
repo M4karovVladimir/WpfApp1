@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#8088CE">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Background="Black" Grid.ColumnSpan="4"></Border>
+
+        <TextBlock Foreground="#8088CE" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="4" FontSize="52">MAKAROV MUSIC</TextBlock>
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="5,10,5,23" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White">
+            <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="Регистрация" TextAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="20"/>
+        </Border>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Придумайте логин</TextBlock>
+
+        <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,32,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
+            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
+        </Border>
+
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Придумайте пароль</TextBlock>
+        <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,30,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
+            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
+        </Border>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Повторите пароль</TextBlock>
+        <Border Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,30,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
+            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
+        </Border>
+
+        <Grid>
+            <Button Margin="299,377,-299,-335" Content="РЕГИСТРАЦИЯ">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="White"
+                                CornerRadius="15"
+                                BorderThickness="1"
+                                BorderBrush="Black">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Foreground="Black" Text="{Binding}"/>
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
