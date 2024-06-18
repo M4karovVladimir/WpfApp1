@@ -24,28 +24,23 @@
         <Border Background="Black" Grid.ColumnSpan="4"></Border>
 
         <TextBlock Foreground="#8088CE" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="4" FontSize="52">MAKAROV MUSIC</TextBlock>
-        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="5,10,5,23" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White">
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10,0,10" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White">
             <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="Регистрация" TextAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="20"/>
         </Border>
 
         <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Придумайте логин</TextBlock>
 
         <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,32,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
-            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
+            <TextBox x:Name="LoginTextBox" VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0"/>
         </Border>
 
         <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Придумайте пароль</TextBlock>
         <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,30,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
-            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
-        </Border>
-
-        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">Повторите пароль</TextBlock>
-        <Border Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,30,0,0" Height="40" Width="350" HorizontalAlignment="Center" CornerRadius="10" Background="White" VerticalAlignment="Top">
-            <TextBox VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0" TextChanged="TextBox_TextChanged_1"/>
+            <TextBox x:Name="PasswordTextBox" VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Bottom" BorderThickness="0" FontSize="20" Margin="5,0,5,0"/>
         </Border>
 
         <Grid>
-            <Button Margin="299,377,-299,-335" Content="РЕГИСТРАЦИЯ">
+            <Button Margin="299,377,-299,-335" Content="РЕГИСТРАЦИЯ" Click="RegisterButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="White"

@@ -7,23 +7,61 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" Background="#8088CE">
     <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Border Background="Black" Grid.ColumnSpan="4"></Border>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Background="Black" Grid.ColumnSpan="4"></Border>
 
-            <TextBlock Foreground="#8088CE" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="4" FontSize="52">MAKAROV MUSIC</TextBlock>
-            
+        <TextBlock Foreground="#8088CE" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="4" FontSize="52">MAKAROV MUSIC</TextBlock>
+
+        <Border Grid.ColumnSpan="4" Background="Black" Height="60" VerticalAlignment="Top"></Border>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Height="60" VerticalAlignment="Top" Foreground="#8088CE" HorizontalAlignment="Center" FontSize="50" >MAKAROV MUSIC</TextBlock>
+        <Border Grid.Row="1" BorderThickness="1" CornerRadius="0" Background="White" Height="40" Margin="10,23,0,10">
+            <TextBlock Height="40" HorizontalAlignment="Center" Text="Название песни" FontSize="16" Margin="0,9,0,-11"></TextBlock>
+        </Border>
+
+        <Border Grid.ColumnSpan="4" Background="Black" Height="60" VerticalAlignment="Top"></Border>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Height="60" VerticalAlignment="Top" Foreground="#8088CE" HorizontalAlignment="Center" FontSize="50" >MAKAROV MUSIC</TextBlock>
+        <Border Grid.Row="3" BorderThickness="1" CornerRadius="0" Background="White" Height="40" Margin="10,69,0,36" Grid.RowSpan="2">
+            <TextBlock Height="40" HorizontalAlignment="Center" Text="Обложка" FontSize="16" Margin="0,9,0,-11"></TextBlock>
+        </Border>
+
+        <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="139,23,0,0"><Run Language="ru-ru" Text="Описание"/></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="20,3,0,0"><Run Language="ru-ru" Text="В разработке"/></TextBlock>
+
+        <Grid>
+            <Button Margin="494,378,-494,-337" Content="Добавить трек" Click="Add_New_Description" Name="Description_Spacite">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="White"
+                          CornerRadius="0"
+                          BorderThickness="1"
+                          BorderBrush="Black">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Foreground="Black" Text="{Binding}"/>
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </Grid>
+
+        <TextBox x:Name="DescriptionTextBox" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2"/>
+    </Grid>
 </Window>
